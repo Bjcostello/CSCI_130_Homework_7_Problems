@@ -9,9 +9,10 @@ using namespace std;
 int time();
 
 int main() {
-  int seconds;
-  cin >> seconds;
-  time(int seconds);
+  int a;
+  cout << "enter a number of seconds: \n";
+  cin >> a;
+  int time(a);
 
   return 0;
 }
@@ -25,9 +26,11 @@ the arguments in the calling function.
 */
 
 int time(int seconds) {
+  cout << "calculating\n";
   int hours = seconds / 3600;
   int mins = seconds / 60;
   int secs = seconds;
 
   cout << endl << hours << ":" << mins << ":" << secs << endl;
+  return 0;
 }

@@ -9,9 +9,10 @@ using namespace std;
 int time();
 
 int main() {
-  int seconds;
-  cin >> seconds;
-  time(int seconds);
+  int a,b,c,d;
+  cout << "enter a number of seconds: \n";
+  cin >> a>>b>>c>>d;
+  int time(a, b, c, d);
 
   return 0;
 }
@@ -24,10 +25,20 @@ minutes, and seconds. Using the reference parameters, the function should alter
 the arguments in the calling function.
 */
 
-int time(int seconds) {
-  int hours = seconds / 3600;
-  int mins = seconds / 60;
-  int secs = seconds;
+void time(int seconds, int& hours, int& mins, int& secs) {
+  cout << "calculating\n";
+  cout<<"Seconds: "<<seconds<<endl
+    <<"hours: "<<hours<<endl
+    <<"mins: "<<mins<<endl
+    <<"secs: "<<secs<<endl;
+  hours = seconds / 3600;
+  mins = seconds / 60;
+  secs = seconds;
+
+  cout<<"Seconds: "<<seconds<<endl
+    <<"hours: "<<hours<<endl
+    <<"mins: "<<mins<<endl
+    <<"secs: "<<secs<<endl;
 
   cout << endl << hours << ":" << mins << ":" << secs << endl;
 }
